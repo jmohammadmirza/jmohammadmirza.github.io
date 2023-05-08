@@ -25,6 +25,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
+import { DragNDropComponent } from './drag-ndrop/drag-ndrop.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 
@@ -37,7 +39,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     HomrComponent,
     NavBarComponent,
     TableComponent,
-    DashboardComponent
+    DashboardComponent,
+    DragNDropComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatGridListModule,
     MatMenuModule,
     MatIconModule,
-    LayoutModule
+    LayoutModule,
+    DragDropModule
     
   ],
   providers: [],
