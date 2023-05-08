@@ -12,21 +12,4 @@ import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 })
 export class AppComponent {
   title = 'qna-app';
-  isLoading = true;
-  
-  color: ThemePalette = 'accent';
-  mode: ProgressBarMode = 'determinate';
-  value = this.isLoading ? undefined : 50;
-  bufferValue = 75;
-
-  constructor(private router: Router) {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationStart) {
-        this.isLoading = true;
-      }
-      if (event instanceof NavigationEnd) {
-        this.isLoading = false;
-      }
-    });
-  }
 }

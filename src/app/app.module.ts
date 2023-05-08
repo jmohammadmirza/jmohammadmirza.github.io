@@ -13,11 +13,25 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { QnAFormComponent } from './qn-a-form/qn-a-form.component';
+import { HomrComponent } from './homr/homr.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+
+
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QnAFormComponent,
+    HomrComponent,
+    NavBarComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +44,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
     
   ],
   providers: [],
