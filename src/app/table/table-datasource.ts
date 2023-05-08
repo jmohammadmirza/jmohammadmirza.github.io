@@ -7,32 +7,24 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 // TODO: Replace this with your own data model type
 export interface TableItem {
   name: string;
-  id: number;
-  comments:string;
+  position: number;
+  weight: number;
+  symbol: string;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TableItem[] = [
-  {id: 1, name: 'Hydrogen',comments: 'chemical'},
-  {id: 2, name: 'Helium',comments: 'chemical'},
-  {id: 3, name: 'Lithium',comments: 'chemical'},
-  {id: 4, name: 'Beryllium',comments: 'chemical'},
-  {id: 5, name: 'Boron',comments: 'chemical'},
-  {id: 6, name: 'Carbon',comments: 'chemical'},
-  {id: 7, name: 'Nitrogen',comments: 'chemical'},
-  {id: 8, name: 'Oxygen',comments: 'chemical'},
-  {id: 9, name: 'Fluorine',comments: 'chemical'},
-  {id: 10, name: 'Neon',comments: 'chemical'},
-  {id: 11, name: 'Sodium',comments: 'chemical'},
-  {id: 12, name: 'Magnesium',comments: 'chemical'},
-  {id: 13, name: 'Aluminum',comments: 'chemical'},
-  {id: 14, name: 'Silicon',comments: 'chemical'},
-  {id: 15, name: 'Phosphorus',comments: 'chemical'},
-  {id: 16, name: 'Sulfur',comments: 'chemical'},
-  {id: 17, name: 'Chlorine',comments: 'chemical'},
-  {id: 18, name: 'Argon',comments: 'chemical'},
-  {id: 19, name: 'Potassium',comments: 'chemical'},
-  {id: 20, name: 'Calcium',comments: 'chemical'},
+  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
+  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
+  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
+  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
+  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
+  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 11, name: 'Chloride', weight: 21.1797, symbol: 'Cl'},
 ];
 
 /**
@@ -99,8 +91,7 @@ export class TableDataSource extends DataSource<TableItem> {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
         case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
-        case 'comments': return compare(a.name, b.name, isAsc);
+        case 'weight': return compare(+a.weight, +b.weight, isAsc);
         default: return 0;
       }
     });
