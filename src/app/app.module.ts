@@ -20,6 +20,11 @@ import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 
@@ -31,7 +36,8 @@ import { MatSortModule } from '@angular/material/sort';
     QnAFormComponent,
     HomrComponent,
     NavBarComponent,
-    TableComponent
+    TableComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,11 @@ import { MatSortModule } from '@angular/material/sort';
     MatProgressBarModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatIconModule,
+    LayoutModule
     
   ],
   providers: [],
